@@ -1,34 +1,70 @@
 :root {
-    --animate-duration: 2s;
-
+  --primary-color: #189a46;
+  --secondary-color: #f53626;
+  --font-color: #696969;
+  --para-color: #696969;
+  --bg-color: #fff;
+  --heading-color: #000c04;
+  --border-radius: 10px;
+  --border-color: #ddd;
+  --border-light: #f0f3f0;
+  --nav-color: #292922;
+  --dropdown-color: #fff;
+  --bg-light: rgba(147, 107, 232, 0.05);
+  --iframe-filter: grayscale(0%);
+  --widget-bg: #3f3a64;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #189a46;
+  --secondary: #f53626;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
 }
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.testimonials_wrapper {
+  background-color: #f9f7fe;
+  font-family: "Jost", sans-serif;
 }
 
-html,
-body {
-    color: #636363;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
+.testimonials_wrapper .title h2 {
+  /* font-weight: 700; */
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin: 0;
 }
 
-li {
-    list-style: none;
+.testimonials_wrapper .title p {
+  font-weight: 600;
+  font-size: 35px;
+  text-align: center;
+  color: var(--heading-color);
+  margin: 0;
 }
 
-a {
-    text-decoration: none;
+.cards {
+  display: flex;
+  justify-content: space-around;
 }
 
-.container {
-    max-width: 1199px;
-    margin: auto;
+.card {
+  width: 300px;
 }
-
