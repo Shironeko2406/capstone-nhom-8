@@ -60,7 +60,7 @@
         </div>
     </nav>
 
-    <div class="slider">
+    <section class="slider">
         <div class="list">
             <div class="item dark-overlay">
                 <img src="img/image3.jpg" alt="">
@@ -159,65 +159,59 @@
             <li></li>
             <li></li>
         </ul>
-    </div>
+    </section>
 
-    <script>
+    <section class="number">
+        <div class="container">
+            <div class="number__content">
+                <div class="number__item">
 
-        const body = document.querySelector("body"),
-            nav = document.querySelector("nav"),
-            modeToggle = document.querySelector(".dark-light"),
-            searchToggle = document.querySelector(".searchToggle"),
-            sidebarOpen = document.querySelector(".sidebarOpen"),
-            siderbarClose = document.querySelector(".siderbarClose");
+                    <p><span class="counter">730</span></p>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="number__item">
 
-        let getMode = localStorage.getItem("mode");
-        if (getMode && getMode === "dark-mode") {
-            body.classList.add("dark");
-        }
+                    <p><span class="counter">80</span></p>
+                    <p>Professionals</p>
+                </div>
+                <div class="number__item">
 
-        // js code to toggle dark and light mode
-        modeToggle.addEventListener("click", () => {
-            modeToggle.classList.toggle("active");
-            body.classList.toggle("dark");
+                    <p><span class="counter">812</span></p>
+                    <p>Adopted Pets</p>
+                </div>
+                <div class="number__item">
 
-            // js code to keep user selected mode even page refresh or file reopen
-            if (!body.classList.contains("dark")) {
-                localStorage.setItem("mode", "light-mode");
-            } else {
-                localStorage.setItem("mode", "dark-mode");
-            }
-        });
-
-        // js code to toggle search box
-        searchToggle.addEventListener("click", () => {
-            searchToggle.classList.toggle("active");
-        });
+                    <p><span class="counter">90</span></p>
+                    <p>Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-        //   js code to toggle sidebar
-        sidebarOpen.addEventListener("click", () => {
-            nav.classList.add("active");
-        });
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Mô tả: Thư viện jQuery, sử dụng để thực hiện các chức năng JavaScript nâng cao. -->
 
-        body.addEventListener("click", e => {
-            let clickedElm = e.target;
+    <!-- Waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <!-- Mô tả: Thư viện Waypoints, sử dụng để xác định khi phần tử vào một điểm nhất định khi cuộn trang. -->
 
-            if (window.innerWidth <= 768) {
-                // Chỉ đóng thanh nav khi click vào biểu tượng nút đóng
-                if (clickedElm.classList.contains("siderbarClose")) {
-                    nav.classList.remove("active");
-                }
-            } else {
-                // Đóng thanh nav khi click ra ngoài nếu không phải là màn hình di động
-                if (!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")) {
-                    nav.classList.remove("active");
-                }
-            }
-        });
+    <!-- Counter-Up -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <!-- Mô tả: Thư viện Counter-Up, sử dụng để tăng giảm giá trị số một cách đồng đều. -->
 
-    </script>
+    <!-- Util.js -->
+    <script src="./js/util.js"></script>
+    <!-- Mô tả: Tệp JavaScript chứa các hàm và logic tiện ích. -->
+
+    <!-- Main.js -->
+    <script src="./js/main.js"></script>
+    <!-- Mô tả: Tệp JavaScript chứa các hàm và logic chính của trang web của bạn. -->
 
     <script src="js/script.js"></script>
+    <script src="js/counter-up.js"></script>
+    <script src="js/dark-light.js"></script>
 </body>
 
 </html>

@@ -35,6 +35,11 @@ body.dark{
     --searchToggle: #222;
 }
 
+.container {
+    max-width: 1199px;
+    margin: auto;
+}
+
 nav{
     position: fixed;
     top: 0;
@@ -481,5 +486,55 @@ body.dark .search-field i{
 @media screen and (min-width: 993px) and (max-width: 1200px) {
     .slider .list .item {
         width: 33.33%; /* Mỗi phần tử chiếm 33.33% chiều rộng của slider */
+    }
+}
+
+
+/* NUMBER */
+.number {
+    background-color: #189a46;
+    padding: 80px 0 50px;
+    text-align: center;
+    margin-top: 50px ;
+}
+
+.number__content {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around;
+}
+
+.number__item {
+    width: 100%; /* Full width on small screens, adjust as needed */
+    margin-bottom: 20px; /* Add some spacing between items */
+}
+
+.number__item p:first-of-type {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 60px;
+}
+
+.number__item p:last-of-type {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.8;
+    line-height: 25px;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+/* Media queries for responsive design */
+@media screen and (min-width: 768px) {
+    .number__item {
+        width: 45%; /* Adjust the width for medium-sized screens */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .number__item {
+        width: 25%; /* Adjust the width for large screens */
     }
 }
