@@ -68,3 +68,17 @@
 .card {
   width: 300px;
 }
+
+/* green dots */
+
+.gree_dot_wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.gree_dot {
+  background: #5ccc5c;
+  padding: 5px 12px;
+  border-radius: 10px;
+  border: none;
+}
